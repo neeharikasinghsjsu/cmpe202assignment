@@ -21,7 +21,7 @@ GameChoice letterToGameChoice(char choice) {
 }
 
 GameChoice stringToGameChoice(const std::string& choice) {
-    if (choice.length() == 0) {
+    if (choice.length() == 0 || choice.length() > 1) {
         return INVALID;
     }
     return letterToGameChoice(choice.at(0));
